@@ -66,24 +66,27 @@ export class MediaUpload extends React.Component {
 
 		const onMediaLibraryButtonPressed = () => {
 			requestMediaPickFromMediaLibrary( [ mediaType ], ( mediaId, mediaUrl ) => {
+				const media = { mediaId, mediaUrl };
 				if ( mediaId ) {
-					this.props.onSelectURL( mediaId, mediaUrl );
+					this.props.onSelectURL( media );
 				}
 			} );
 		};
 
 		const onMediaUploadButtonPressed = () => {
 			requestMediaPickFromDeviceLibrary( [ mediaType ], ( mediaId, mediaUrl ) => {
+				const media = { mediaId, mediaUrl };
 				if ( mediaId ) {
-					this.props.onSelectURL( mediaId, mediaUrl );
+					this.props.onSelectURL( media );
 				}
 			} );
 		};
 
 		const onMediaCaptureButtonPressed = () => {
 			requestMediaPickFromDeviceCamera( [ mediaType ], ( mediaId, mediaUrl ) => {
+				const media = { mediaId, mediaUrl };
 				if ( mediaId ) {
-					this.props.onSelectURL( mediaId, mediaUrl );
+					this.props.onSelectURL( media );
 				}
 			} );
 		};
