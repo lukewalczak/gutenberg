@@ -21,6 +21,7 @@ export { default as Caption } from './caption';
 
 // Content Related Components
 export { default as BlockList } from './block-list';
+export { default as BlockIcon } from './block-icon';
 export { default as BlockMover } from './block-mover';
 export { default as BlockToolbar } from './block-toolbar';
 export { default as DefaultBlockAppender } from './default-block-appender';
