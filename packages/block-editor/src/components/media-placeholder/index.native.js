@@ -48,8 +48,8 @@ function MediaPlaceholder( props ) {
 
 	return (
 		<MediaUpload
-			mediaType={ allowedTypes[ 0 ] }
-			onSelectURL={ onSelect }
+			allowedTypes={ allowedTypes }
+			onSelect={ onSelect }
 			render={ ( { open, getMediaOptions } ) => {
 				return (
 					<TouchableWithoutFeedback
